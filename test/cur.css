@@ -1,0 +1,20 @@
+#hashtag .share {
+    border: 1px solid #000;
+}
+
+#hashtag {
+    margin: 0px;
+}
+
+h1 {
+    text-align: left;
+    font-size: 10px;
+}
+
+h2 {
+    text-align: right;
+}
+
+.removed {
+    color: #fff;
+}

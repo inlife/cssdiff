@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Web Design in 4 minutes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+  </head>
+  <body>
+    <header id="header">
+      <h1>CSS Semantic Difference Calculator</h1>
+      <div class="form-container">
+        <textarea id="diff-old" placeholder="Insert your current CSS">
+#hashtag .share {
+    border: 1px solid #000;
+}
+
+#hashtag {
+    margin: 0px;
+}
+
+h1 {
+    text-align: left;
+    font-size: 10px;
+}
+
+h2 {
+    text-align: right;
+}
+
+.removed {
+    color: #fff;
+}
+
+        </textarea>
+        <textarea id="diff-new" placeholder="Insert your new CSS">
+#hashtag {
+    margin: 10px;
+}
+
+h1 {
+    font-size: 10px;
+    text-align: left;
+}
+
+h2 {
+    text-align: right;
+}
+
+#hashtag .share {
+    border: 1px solid #000;
+}
+
+.added {
+    text-align: right;
+}
+        </textarea>
+      </div>
+      <p>
+        <a href="#" id="diff-calculate">Calculate!</a>
+      </p>
+    </header>
+
+    <main>
+      <section id="start">
+        <p>Let's say you have a product, a portfolio, or just an idea you want to share with everyone on your <em>own</em> website. Before you publish it on the internet, you want to make it look attractive, professional, or at least <em>decent</em> to look at.</p>
+        <p>What is the <a href="#content">first thing</a> you need to work on?</p>
+      </section>
+
+      <section id="result" style="display: none">
+        <h2>Result</h2>
+        <div class="result-container">
+          <div>Removed blocks: <pre id="removed"></pre></div>
+          <div>Added blocks: <pre id="added"></pre></div>
+        </div>
+        <p>The purpose of <strong>design</strong> is to enhance the presentation of the content it's applied to. It might sound obvious, but content being the <strong>primary</strong> element of a website, it should not be established as an afterthought.</p>
+      </section>
+
+
+      <section id="share">
+        <h2>Share the love!</h2>
+        <nav class="buttons">
+          <a class="button github" href="https://github.com/inlife/cssdiff" target="_blank">
+            <em>Star on</em> <strong>GitHub</strong>
+          </a>
+          <a
+            class="button facebook"
+            href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Finlife.github.io%2Fcssdiff%2F"
+            rel="nofollow"
+            target="_blank"
+            >
+            <em>Share on</em> <strong>Facebook</strong>
+          </a>
+          <a
+            class="button twitter"
+            data-social-network="Twitter"
+            data-social-action="tweet"
+            data-social-target="https://inlife.github.io/cssdiff"
+            href="https://twitter.com/intent/tweet?text=CSS%20Diff%20tool&url=https%3A%2F%2Finlife.github.io%2Fcssdiff&via=inlife360"
+            rel="nofollow"
+            target="_blank"
+            >
+            <em>Share on</em> <strong>Twitter</strong>
+          </a>
+        </nav>
+        <p><strong>Enormous</strong> thanks to <strong><a href="https://twitter.com/jgthms" target="_blank" rel="nofollow">@jgthms</a></strong> for his <a href="https://github.com/jgthms/web-design-in-4-minutes">web-design-in-4-minutes</a> project, which was used to create this site.</p>
+        <p>Thanks for reading!</p>
+      </section>
+
+      <footer>
+        <a class="button" href="https://inlife.github.io/" target="_blank" rel="nofollow">Made by <strong>@inlife</strong></a>
+      </footer>
+    </main>
+
+<script type="text/javascript">
+WebFontConfig = {
+  google: {
+    families: ['Roboto:300,400,500']
+  }
+};
+(function(d) {
+  var wf = d.createElement('script'), s = d.scripts[0];
+  wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';
+  s.parentNode.insertBefore(wf, s);
+})(document);
+</script>
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+  <script src="bundle.js"></script>
+  </body>
+</html>

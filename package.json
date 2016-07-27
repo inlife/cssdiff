@@ -4,7 +4,8 @@
   "description": "Online CSS, SCSS, Stylus diff tool",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/browserify/bin/cmd.js main.js -o bundle.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/Inlife/cssdiff/issues"
   },
-  "homepage": "https://github.com/Inlife/cssdiff#readme"
+  "homepage": "https://github.com/Inlife/cssdiff#readme",
+  "dependencies": {
+    "css": "^2.2.1"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.0"
+  }
 }
