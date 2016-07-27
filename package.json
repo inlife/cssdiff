@@ -1,0 +1,19 @@
+{
+  "name": "cssdiff",
+  "version": "1.0.0",
+  "description": "Online CSS, SCSS, Stylus diff tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Inlife/cssdiff.git"
+  },
+  "author": "Inlife",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Inlife/cssdiff/issues"
+  },
+  "homepage": "https://github.com/Inlife/cssdiff#readme"
+}
