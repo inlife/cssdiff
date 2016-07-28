@@ -1,129 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Web Design in 4 minutes</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en" xml:lang="en" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# og: http://opengraphprotocol.org/schema/# fb: http://www.facebook.com/2008/fbml/#" itemscope itemtype="http://schema.org/Article">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+
+    <title>cssdiff – Calculate semantic CSS difference online</title>
+
+    <meta name="description" content="cssdiff – Calculate semantic casdade style sheets difference online. Online diff tool.">
+    <meta name="keywords" content="CSS diff tool online calc calculate style">
+    <meta name="author" content="Vladislav Gritsenko">
+
+    <link rel="canonical" content="https://inlife.github.io/cssdiff/">
+    <link rel="author" href="https://plus.google.com/114197786731970943237">
+    <link rel="publisher" href="https://plus.google.com/114197786731970943237">
+
+    <meta property="og:title" content="cssdiff – Calculate semantic CSS difference online">
+    <meta property="og:description" content="cssdiff – Calculate semantic casdade style sheets difference online. Online diff tool.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://inlife.github.io/cssdiff/">
+    <meta property="og:image" content="https://inlife.github.io/cssdiff/images/cover_small.jpg">
+    <meta property="og:site_name" content="cssdiff – Calculate semantic CSS difference online">
+
+    <meta property="fb:admins" content="100000470641337">
+    <meta property="fb:profile_id" content="100000470641337">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@inlife360">
+    <meta name="twitter:creator" content="@inlife360">
+    <meta name="twitter:description" content="cssdiff – Calculate semantic casdade style sheets difference online. Online diff tool.">
+
+    <meta itemprop="name" content="cssdiff – Calculate semantic CSS difference online">
+    <meta itemprop="description" content="cssdiff – Calculate semantic casdade style sheets difference online. Online diff tool.">
+    <meta itemprop="image" content="https://inlife.github.io/cssdiff/images/cover_small.jpg">
+
     <link rel="stylesheet" type="text/css" href="assets/style.css">
-  </head>
-  <body>
+</head>
+<body>
     <header id="header">
-      <h1>CSS Semantic Difference Calculator</h1>
-      <div class="form-container">
-        <textarea id="diff-old" placeholder="Insert your current CSS">
+        <h1>cssdiff – #calc #sem #diff #now #4free</h1>
+        <h3>A tool to help you in your everyday developer routine!<br>Just copy-paste your css styles to get started</h3>
+        <div class="form-container">
+            <textarea id="diff-old" placeholder="Insert your current CSS">
 #hashtag .share {
-    border: 1px solid #000;
+        border: 1px solid #000;
 }
 
 #hashtag {
-    margin: 0px;
+        margin: 0px;
 }
 
 h1 {
-    text-align: left;
-    font-size: 10px;
+        text-align: left;
+        font-size: 10px;
 }
 
 h2 {
-    text-align: right;
+        text-align: right;
 }
 
 .removed {
-    color: #fff;
+        color: #fff;
 }
 
-        </textarea>
-        <textarea id="diff-new" placeholder="Insert your new CSS">
+            </textarea>
+            <textarea id="diff-new" placeholder="Insert your new CSS">
 #hashtag {
-    margin: 10px;
+        margin: 10px;
 }
 
 h1 {
-    font-size: 10px;
-    text-align: left;
+        font-size: 10px;
+        text-align: left;
 }
 
 h2 {
-    text-align: right;
+        text-align: right;
 }
 
 #hashtag .share {
-    border: 1px solid #000;
+        border: 1px solid #000;
 }
 
 .added {
-    text-align: right;
+        text-align: right;
 }
-        </textarea>
-      </div>
-      <p>
-        <a href="#" id="diff-calculate">Calculate!</a>
-      </p>
+            </textarea>
+        </div>
+        <p>
+            <a href="#" id="diff-calculate">Calculate!</a>
+        </p>
     </header>
 
     <main>
-      <section id="start">
-        <p>Let's say you have a product, a portfolio, or just an idea you want to share with everyone on your <em>own</em> website. Before you publish it on the internet, you want to make it look attractive, professional, or at least <em>decent</em> to look at.</p>
-        <p>What is the <a href="#content">first thing</a> you need to work on?</p>
-      </section>
+        <section id="start">
+            <p>This is a tool, that can help you to calculate a difference between 2 CSS files. Let's say you are a developer, who's task is to update site css files. 
+            But your frontend developer doesn't use any type of VCS. It sucks, now you need to manually look for changed styles and copy-paste them into your own css file.</p>
+            <p><strong>Well, not anymore!</strong> Now you can just insert content of your old stylesheet file, insert content from a new stylesheet file, and voilà!</p>
+        </section>
 
-      <section id="result" style="display: none">
-        <h2>Result</h2>
-        <div class="result-container">
-          <div>Removed blocks: <pre id="removed"></pre></div>
-          <div>Added blocks: <pre id="added"></pre></div>
-        </div>
-        <p>The purpose of <strong>design</strong> is to enhance the presentation of the content it's applied to. It might sound obvious, but content being the <strong>primary</strong> element of a website, it should not be established as an afterthought.</p>
-      </section>
+        <section id="result" style="display: none">
+            <h2>Result</h2>
+            <p>This 2 blocks below are showing difference between css you've inputed. <strong>Removed blocks</strong> section describes style blocks that were removed from first file,
+            or modified (in which case they will be shown also in <em>Added</em> section).</p>
+            <p><strong>Added blocks</strong> is a sections which describes style blocks that were added in the second file, and/or were modified from first file.</p>
+            <div class="result-container">
+                <div>Removed blocks: <pre id="removed"></pre></div>
+                <div>Added blocks: <pre id="added"></pre></div>
+            </div>
+        </section>
 
 
-      <section id="share">
-        <h2>Share the love!</h2>
-        <nav class="buttons">
-          <a class="button github" href="https://github.com/inlife/cssdiff" target="_blank">
-            <em>Star on</em> <strong>GitHub</strong>
-          </a>
-          <a
-            class="button facebook"
-            href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Finlife.github.io%2Fcssdiff%2F"
-            rel="nofollow"
-            target="_blank"
-            >
-            <em>Share on</em> <strong>Facebook</strong>
-          </a>
-          <a
-            class="button twitter"
-            data-social-network="Twitter"
-            data-social-action="tweet"
-            data-social-target="https://inlife.github.io/cssdiff"
-            href="https://twitter.com/intent/tweet?text=CSS%20Diff%20tool&url=https%3A%2F%2Finlife.github.io%2Fcssdiff&via=inlife360"
-            rel="nofollow"
-            target="_blank"
-            >
-            <em>Share on</em> <strong>Twitter</strong>
-          </a>
-        </nav>
-        <p><strong>Enormous</strong> thanks to <strong><a href="https://twitter.com/jgthms" target="_blank" rel="nofollow">@jgthms</a></strong> for his <a href="https://github.com/jgthms/web-design-in-4-minutes">web-design-in-4-minutes</a> project, which was used to create this site.</p>
-        <p>Thanks for reading!</p>
-      </section>
+        <section id="share">
+            <h2>Share the love!</h2>
+            <p>Hope the tool helped you, and now you can recommend it to your friends. Or maybe, just maybe you want to improve it. In this case, <strong>pull requests are highly weclomed</strong>!</p>
+            <nav class="buttons">
+                <a class="button github" href="https://github.com/inlife/cssdiff" target="_blank">
+                    <em>Star on</em> <strong>GitHub</strong>
+                </a>
+                <a
+                    class="button facebook"
+                    href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Finlife.github.io%2Fcssdiff%2F"
+                    rel="nofollow"
+                    target="_blank"
+                    >
+                    <em>Share on</em> <strong>Facebook</strong>
+                </a>
+                <a
+                    class="button twitter"
+                    data-social-network="Twitter"
+                    data-social-action="tweet"
+                    data-social-target="https://inlife.github.io/cssdiff"
+                    href="https://twitter.com/intent/tweet?text=CSS%20Diff%20tool&url=https%3A%2F%2Finlife.github.io%2Fcssdiff&via=inlife360"
+                    rel="nofollow"
+                    target="_blank"
+                    >
+                    <em>Share on</em> <strong>Twitter</strong>
+                </a>
+            </nav>
+            <p><strong>Enormous</strong> thanks to <strong><a href="https://twitter.com/jgthms" target="_blank" rel="nofollow">@jgthms</a></strong> for his <a href="https://github.com/jgthms/web-design-in-4-minutes">web-design-in-4-minutes</a> project, which was used to create this site.</p>
+            <p>Thanks for reading!</p>
+        </section>
 
-      <footer>
-        <a class="button" href="https://inlife.github.io/" target="_blank" rel="nofollow">Made by <strong>@inlife</strong></a>
-      </footer>
+        <footer>
+            <a class="button" href="https://inlife.github.io/" target="_blank" rel="nofollow">Made by <strong>@inlife</strong></a>
+        </footer>
     </main>
 
-<script type="text/javascript">
-WebFontConfig = {
-  google: {
-    families: ['Roboto:300,400,500']
-  }
-};
-(function(d) {
-  var wf = d.createElement('script'), s = d.scripts[0];
-  wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';
-  s.parentNode.insertBefore(wf, s);
-})(document);
-</script>
-  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-  <script src="bundle.js"></script>
-  </body>
+    <script type="text/javascript">
+        WebFontConfig = { google: { families: ['Roboto:300,400,500'] }};
+        (function(d) {
+            var wf = d.createElement('script'), s = d.scripts[0];
+            wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';
+            s.parentNode.insertBefore(wf, s);
+        })(document);
+    </script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script src="bundle.js"></script>
+</body>
 </html>
